@@ -2,7 +2,7 @@
 import React, { useState, useContext, useRef  } from 'react';
 
 import { Animated,TouchableOpacity, Alert } from 'react-native';
-import { getUserData, saveSessionData, clearSessionData, getSessionData} from '../utils/storage'
+import { getUserData, saveSessionData, getSessionData} from '../utils/storage'
 import { ThemeContext } from 'styled-components/native';
 import styled from 'styled-components/native';
 import { EmailIcon, LockIcon, } from '../components/Icons';

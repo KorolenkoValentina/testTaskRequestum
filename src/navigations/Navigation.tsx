@@ -33,19 +33,19 @@ const Stack = createNativeStackNavigator();
 const Navigator: React.FC<{ navigation: any }> = ({ navigation }) => {
   
 
-  // useEffect(() => {
+  useEffect(() => {
     
-  //   const checkSession = async () => {
-  //     const sessionData = await getSessionData();
-  //     if (sessionData && sessionData.isLoggedIn) {
-  //       navigation.navigate(NavigationRoutes.HOME); 
+    const checkSession = async () => {
+      const sessionData = await getSessionData();
+      if (sessionData && sessionData.isLoggedIn) {
+        navigation.navigate(NavigationRoutes.HOME); 
 
-  //     } else {
-  //       navigation.navigate(NavigationRoutes.SPLASH);
-  //     }
-  //   };
-  //   checkSession();
-  // }, []);
+      } else {
+        navigation.navigate(NavigationRoutes.SPLASH);
+      }
+    };
+    checkSession();
+  }, []);
 
   
 

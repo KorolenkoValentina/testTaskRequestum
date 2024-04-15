@@ -8,11 +8,11 @@ const SESSION_STORAGE_KEY = '@MyApp:sessionData';
 
 export const saveUserData = async (userData: any) => {
   try {
-    // Отримуємо попередні дані користувача
+    
     const existingUserDataJSON = await AsyncStorage.getItem(`${STORAGE_KEY}:${userData.email}`);
     let existingUserData = existingUserDataJSON ? JSON.parse(existingUserDataJSON) : {};
 
-    // Зберігаємо нові дані, об'єднуючи їх з попередніми
+    
     const mergedUserData = { ...existingUserData, ...userData };
     await AsyncStorage.setItem(`${STORAGE_KEY}:${userData.email}`, JSON.stringify(mergedUserData));
 
