@@ -1,0 +1,496 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginScreen component matches snapshot 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flexBasis": 0,
+      "flexGrow": 1,
+      "flexShrink": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      {
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+      }
+    }
+  />
+  <SvgMock
+    style={
+      {
+        "marginLeft": "auto",
+        "marginRight": 40,
+      }
+    }
+  />
+  <Text
+    style={
+      {
+        "color": "#FFFFFF",
+        "fontSize": 18,
+        "fontWeight": "bold",
+        "marginBottom": 20,
+      }
+    }
+  >
+    LOGIN
+  </Text>
+  <Text
+    style={
+      {
+        "color": "#818181",
+        "fontSize": 11,
+        "marginBottom": 24,
+      }
+    }
+  >
+    Enter your login password from your account
+  </Text>
+  <View
+    focused={false}
+    style={
+      {
+        "alignItems": "center",
+        "borderBottomLeftRadius": 5,
+        "borderBottomRightRadius": 5,
+        "borderColor": "#818181",
+        "borderStyle": "solid",
+        "borderTopLeftRadius": 5,
+        "borderTopRightRadius": 5,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "marginBottom": 16,
+        "paddingBottom": 10,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+        "width": "80%",
+      }
+    }
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight="24"
+      bbWidth="24"
+      fill="none"
+      focusable={false}
+      height="24"
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          {
+            "flex": 0,
+            "height": 24,
+            "width": 24,
+          },
+        ]
+      }
+      vbHeight={24}
+      vbWidth={24}
+      width="24"
+    >
+      <RNSVGGroup
+        fill={null}
+        propList={
+          [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          clipRule={0}
+          d="M17.8518 16.9879H5.14845C4.72795 16.9879 4.38599 16.6484 4.38599 16.2309V8.27246L11.0767 13.4042C11.2013 13.4996 11.3507 13.5475 11.5003 13.5475C11.6497 13.5475 11.799 13.4996 11.924 13.4042L18.6142 8.27246V16.2307C18.6142 16.6484 18.2723 16.9879 17.8518 16.9879ZM17.5161 7.37598L11.5002 11.9899L5.48394 7.37598H17.5161ZM17.8517 6H5.14833C3.96364 6 3 6.95676 3 8.13288V16.2304C3 17.4064 3.96364 18.3636 5.14833 18.3636H17.8517C19.0364 18.3636 20 17.4064 20 16.2304V8.13288C20 6.95676 19.0364 6 17.8517 6Z"
+          fill={
+            {
+              "payload": 4286677377,
+              "type": 0,
+            }
+          }
+          fillRule={0}
+          propList={
+            [
+              "fill",
+              "fillRule",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+    <TextInput
+      keyboardType="email-address"
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="Email"
+      placeholderTextColor="#818181"
+      style={
+        {
+          "color": "#FFFFFF",
+          "fontSize": 12,
+          "marginLeft": 5,
+        }
+      }
+      testID="emailInput"
+      value=""
+    />
+  </View>
+  <View
+    focused={false}
+    style={
+      {
+        "alignItems": "center",
+        "borderBottomLeftRadius": 5,
+        "borderBottomRightRadius": 5,
+        "borderColor": "#818181",
+        "borderStyle": "solid",
+        "borderTopLeftRadius": 5,
+        "borderTopRightRadius": 5,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "marginBottom": 16,
+        "paddingBottom": 10,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+        "width": "80%",
+      }
+    }
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight="24"
+      bbWidth="24"
+      fill="none"
+      focusable={false}
+      height="24"
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          {
+            "flex": 0,
+            "height": 24,
+            "width": 24,
+          },
+        ]
+      }
+      vbHeight={24}
+      vbWidth={24}
+      width="24"
+    >
+      <RNSVGGroup
+        fill={null}
+        propList={
+          [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          clipRule={0}
+          d="M17.594 18.7758C17.594 18.8985 17.4875 19.0017 17.3619 19.0017H7.625C7.49895 19.0017 7.39286 18.8985 7.39286 18.7758V10.2016C7.39286 10.0789 7.49895 9.97566 7.625 9.97566H17.3619C17.4875 9.97566 17.594 10.0789 17.594 10.2016V18.7758ZM9.3252 6.43919C9.3252 4.73875 10.7467 3.35547 12.4931 3.35547C14.2401 3.35547 15.6616 4.73875 15.6616 6.43919V8.61947H9.3252V6.43919ZM17.3619 8.61983H17.0545V6.43955C17.0545 3.99137 15.0083 2 12.4932 2C9.97858 2 7.93236 3.99137 7.93236 6.43955V8.61983H7.625C6.72904 8.61983 6 9.32961 6 10.2016V18.7758C6 19.6479 6.72904 20.3576 7.625 20.3576H17.3619C18.2578 20.3576 18.9869 19.6479 18.9869 18.7758V10.2016C18.9869 9.32961 18.2578 8.61983 17.3619 8.61983Z"
+          fill={
+            {
+              "payload": 4286677377,
+              "type": 0,
+            }
+          }
+          fillRule={0}
+          propList={
+            [
+              "fill",
+              "fillRule",
+            ]
+          }
+        />
+        <RNSVGPath
+          clipRule={0}
+          d="M12.4931 12.5127C12.1086 12.5127 11.7966 12.8164 11.7966 13.1906V15.7862C11.7966 16.1604 12.1086 16.4641 12.4931 16.4641C12.8776 16.4641 13.1895 16.1604 13.1895 15.7862V13.1906C13.1895 12.8164 12.8776 12.5127 12.4931 12.5127Z"
+          fill={
+            {
+              "payload": 4286677377,
+              "type": 0,
+            }
+          }
+          fillRule={0}
+          propList={
+            [
+              "fill",
+              "fillRule",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+    <TextInput
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="Password"
+      placeholderTextColor="#818181"
+      secureTextEntry={true}
+      style={
+        {
+          "color": "#FFFFFF",
+          "fontSize": 12,
+          "marginLeft": 5,
+        }
+      }
+      testID="passwordInput"
+      value=""
+    />
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "marginLeft": "auto",
+          "opacity": 1,
+        }
+      }
+    >
+      <SvgMock />
+    </View>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "marginLeft": "auto",
+        "marginRight": 40,
+        "opacity": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#EB0057",
+          "fontSize": 11,
+          "marginBottom": 16,
+          "textDecorationLine": "underline",
+        }
+      }
+    >
+      Forgot password?
+    </Text>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "opacity": 1,
+        "transform": [
+          {
+            "translateX": 0,
+          },
+        ],
+      }
+    }
+    testID="loginButton"
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "backgroundColor": "#EB0057",
+          "borderBottomLeftRadius": 5,
+          "borderBottomRightRadius": 5,
+          "borderTopLeftRadius": 5,
+          "borderTopRightRadius": 5,
+          "elevation": 5,
+          "marginBottom": 16,
+          "minWidth": "80%",
+          "paddingBottom": 15,
+          "paddingLeft": 15,
+          "paddingRight": 15,
+          "paddingTop": 15,
+          "shadowColor": "#EB0057",
+          "shadowOffset": {
+            "height": 12,
+            "width": 0,
+          },
+          "shadowOpacity": 0.58,
+          "shadowRadius": 16,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#FFFFFF",
+            "fontSize": 12,
+            "textAlign": "center",
+          }
+        }
+      >
+        Login
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "bottom": "-30%",
+        "flexDirection": "row",
+        "position": "relative",
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#FFFFFF",
+          "fontSize": 11,
+        }
+      }
+    >
+      Don't have an account? 
+    </Text>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+      testID="signUpButton"
+    >
+      <Text
+        style={
+          {
+            "color": "#EB0057",
+            "fontSize": 11,
+            "textDecorationLine": "underline",
+          }
+        }
+      >
+        Sign up
+      </Text>
+    </View>
+  </View>
+</View>
+`;

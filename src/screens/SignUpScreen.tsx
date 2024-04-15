@@ -47,6 +47,16 @@ const SignUpScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
     navigation.navigate(NavigationRoutes.HOME);
   };
 
+  const handleEmailChange = (text: string) => {
+    setEmail(text);
+    setEmailError('');
+  };
+  
+  const handlePasswordChange = (text: string) => {
+    setPassword(text);
+    setPasswordError('');
+  };
+
 
 
   const navigateToLogin = () => {
@@ -65,14 +75,14 @@ const SignUpScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         <StyledAccountIcon />
         <Header>SIGN UP</Header>
         <Subtitle>Create your email and  password for your account</Subtitle>
-        {emailError && <ErrorText>{emailError}</ErrorText>}
+        {emailError  && <ErrorText testID='emailError'>{emailError}</ErrorText>}
         <InputContainer focused={emailFocused} >
           <EmailIcon focused={emailFocused}/>
 
           <Input
             placeholder="Email"
             placeholderTextColor={theme.colors.lightGray}
-            onChangeText={(text: string) => setEmail(text)}
+            onChangeText={handleEmailChange}
             value={email}
             keyboardType="email-address"
             onFocus={() => setEmailFocused(true)}
@@ -86,16 +96,16 @@ const SignUpScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             placeholder="Password"
             placeholderTextColor={theme.colors.lightGray}
             secureTextEntry={!showPassword}
-            onChangeText={(text: string) => setPassword(text)}
+            onChangeText={handlePasswordChange}
             value={password}
             onFocus={() => setPasswordFocused(true)}
             onBlur={() => setPasswordFocused(false)}
           />
-          <EyeIconWrapper onPress={toggleShowPassword}>
-            {showPassword ? <EyeIcon/> : <EyeIcon/>}
+          <EyeIconWrapper testID="eyeIcon" onPress={toggleShowPassword}>
+            {showPassword ? <EyeIcon /> : <EyeIcon/>}
           </EyeIconWrapper>
         </InputContainer>
-        <TouchableOpacity
+        <TouchableOpacity testID='signUpButton'
           onPress={handleSignUp}
           ref={buttonRef}
           style={{ transform: [{ translateX: shakeAnimation }] }}
@@ -106,7 +116,7 @@ const SignUpScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         </TouchableOpacity>
         <SignupTextContainer>
           <SignupText>Already have an account?</SignupText>
-          <TouchableOpacity onPress={navigateToLogin}>
+          <TouchableOpacity testID='loginLink' onPress={navigateToLogin}>
             <StyledText>Log in</StyledText>
           </TouchableOpacity>
         </SignupTextContainer>

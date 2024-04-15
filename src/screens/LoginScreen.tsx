@@ -49,9 +49,9 @@ const LoginScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
       return;
     }
 
-    const userData = await getUserData();
+    const userData = await getUserData(email);
     if (userData && userData.email === email && userData.password === password) {
-    await saveSessionData(userData);
+    await saveSessionData(email, userData);
 
     navigation.navigate(NavigationRoutes.HOME);
     } else {
@@ -80,7 +80,7 @@ const LoginScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
           <EmailIcon focused={emailFocused}/>
 
           <Input
-            
+            testID='emailInput'
             placeholder="Email"
             placeholderTextColor={theme.colors.lightGray}
             onChangeText={(text: string) => setEmail(text)}
@@ -94,6 +94,7 @@ const LoginScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         <InputContainer focused={passwordFocused}>
           <LockIcon focused={passwordFocused}/>
           <Input
+            testID='passwordInput'
             placeholder="Password"
             placeholderTextColor={theme.colors.lightGray}
             secureTextEntry={!showPassword}
@@ -109,17 +110,17 @@ const LoginScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         <ForgotPasswordContainer>
           <ForgotPasswordText>Forgot password?</ForgotPasswordText>
         </ForgotPasswordContainer>
-        <TouchableOpacity
+        <TouchableOpacity testID='loginButton'
           onPress={handleLogin}
           ref={buttonRef}
           style={{ transform: [{ translateX: shakeAnimation }] }}>
-          <LoginButton >
+          <LoginButton>
             <ButtonText>Login</ButtonText>
           </LoginButton>
         </TouchableOpacity>
         <SignupTextContainer>
           <SignupText>Don't have an account? </SignupText>
-          <TouchableOpacity onPress={navigateToSignUp}>
+          <TouchableOpacity  testID='signUpButton' onPress={navigateToSignUp}>
             <StyledText>Sign up</StyledText>
           </TouchableOpacity>
         </SignupTextContainer>

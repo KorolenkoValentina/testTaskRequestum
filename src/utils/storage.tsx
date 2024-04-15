@@ -8,16 +8,23 @@ const SESSION_STORAGE_KEY = '@MyApp:sessionData';
 
 export const saveUserData = async (userData: any) => {
   try {
-    await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(userData));
-    console.log('User data saved successfully:', userData);
+    // Отримуємо попередні дані користувача
+    const existingUserDataJSON = await AsyncStorage.getItem(`${STORAGE_KEY}:${userData.email}`);
+    let existingUserData = existingUserDataJSON ? JSON.parse(existingUserDataJSON) : {};
+
+    // Зберігаємо нові дані, об'єднуючи їх з попередніми
+    const mergedUserData = { ...existingUserData, ...userData };
+    await AsyncStorage.setItem(`${STORAGE_KEY}:${userData.email}`, JSON.stringify(mergedUserData));
+
+    console.log('User data saved successfully:', mergedUserData);
   } catch (error) {
     console.error('Error saving user data to asyncStorage:', error);
   }
 };
 
-export const getUserData = async () => {
+export const getUserData = async (email: string) => {
   try {
-    const userDataJSON = await AsyncStorage.getItem(STORAGE_KEY);
+    const userDataJSON = await AsyncStorage.getItem(`${STORAGE_KEY}:${email}`);
     if (userDataJSON === null) {
       console.log('No user data found');
       return null;
@@ -31,14 +38,20 @@ export const getUserData = async () => {
   }
 };
 
-export const saveSessionData = async (sessionData: any) => {
+export const saveSessionData = async (sessionId: string, sessionData: any) => {
   try {
-    await AsyncStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(sessionData));
-    console.log('Session data saved successfully:', sessionData);
+    const existingSessionDataJSON = await AsyncStorage.getItem(`${SESSION_STORAGE_KEY}:${sessionId}`);
+    let existingSessionData = existingSessionDataJSON ? JSON.parse(existingSessionDataJSON) : {};
+
+    const mergedSessionData = { ...existingSessionData, ...sessionData };
+    await AsyncStorage.setItem(`${SESSION_STORAGE_KEY}:${sessionId}`, JSON.stringify(mergedSessionData));
+
+    console.log('Session data saved successfully:', mergedSessionData);
   } catch (error) {
     console.error('Error saving session data to asyncStorage:', error);
   }
 };
+
 
 export const getSessionData = async () => {
   try {
@@ -84,5 +97,7 @@ export const shakeButton = (shakeAnimation: Animated.Value) => {
     Animated.timing(shakeAnimation, { toValue: 0, duration: 50, useNativeDriver: true }),
   ]).start();
 };
+
+
 
 

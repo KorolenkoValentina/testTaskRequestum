@@ -52,13 +52,13 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ navigation }) => {
       <BgImage source={require('../image/bg.png')} />
         
       <LogoContainer>
-        <Logo/>
+        <Logo testID='logo'/>
       </LogoContainer>
       <ButtonContainer>
-        <Button pink onPress={() => navigation.navigate(NavigationRoutes.LOG_IN)}>
+        <Button pink testID='loginButton' onPress={() => navigation.navigate(NavigationRoutes.LOG_IN)}>
           <ButtonText>Login</ButtonText>
         </Button>
-        <Button  onPress={() => navigation.navigate(NavigationRoutes.SIGN_UP)}>
+        <Button testID='registerButton' onPress={() => navigation.navigate(NavigationRoutes.SIGN_UP)}>
           <ButtonText>Register</ButtonText>
         </Button>
       </ButtonContainer>

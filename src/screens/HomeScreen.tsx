@@ -17,14 +17,8 @@ const HomeScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // const userData = await getUserData();
-        // if (!userData) {
-          
-        //   navigation.navigate(NavigationRoutes.SIGN_UP);
-        //   return;
-        // }
-        
         const response = await axios.get<UserData>('https://jsonplaceholder.typicode.com/users/1');
+        console.log('Response:', response);
         setUserData(response.data);
       } catch (error) {
         console.error('Data retrieval error:', error);
@@ -62,7 +56,7 @@ const HomeScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
          ) : (
           <Text>Завантаження...</Text>
         )}
-        <LogOutButton onPress={handleLogOut}>
+        <LogOutButton testID='logoutButton' onPress={handleLogOut}>
           <ButtonText>Log Out</ButtonText>
         </LogOutButton>
        
